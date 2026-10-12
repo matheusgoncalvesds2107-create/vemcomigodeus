@@ -1,9 +1,0 @@
-{
-  "name": "Web Rádio Vem Comigo Deus",
-  "short_name": "Vem Comigo Deus",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#061426",
-  "theme_color": "#0a2342"
-}
