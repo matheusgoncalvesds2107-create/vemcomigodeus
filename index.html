@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071a33">
+  <meta name="description" content="Web Rádio Vem Comigo Deus — louvor, palavra e fé 24 horas.">
+  <title>Web Rádio Vem Comigo Deus</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">VC</div>
+      <div>
+        <strong>Vem Comigo Deus</strong>
+        <span>Web Rádio 24h</span>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <span id="serverBadge" class="server-badge">Verificando...</span>
+      <button class="icon-btn" id="installBtn" hidden title="Instalar">⬇</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <span class="eyebrow">LOUVOR • PALAVRA • FÉ</span>
+        <h1>Uma rádio para<br><em>acompanhar seu dia.</em></h1>
+        <p>Louvores, mensagens, oração e programas que edificam, 24 horas por dia.</p>
+
+        <div class="live-row">
+          <span class="live-dot"></span>
+          <span id="liveLabel">NO AR AGORA</span>
+        </div>
+      </div>
+
+      <div class="hero-logo">
+        <div class="logo-ring">
+          <div class="logo-core">
+            <span class="cross">✝</span>
+            <strong>VC</strong>
+            <small>DEUS</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="player-card">
+      <div class="now-playing">
+        <div>
+          <span class="section-kicker">AGORA NA RÁDIO</span>
+          <h2 id="currentTrack">Carregando programação...</h2>
+          <p id="currentKind">Servidor próprio Render</p>
+        </div>
+
+        <div class="listeners">
+          <span>👥</span>
+          <div>
+            <strong id="listeners">0</strong>
+            <small>ouvintes</small>
+          </div>
+        </div>
+      </div>
+
+      <div id="visualizer" class="visualizer">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="main-controls">
+        <button id="muteBtn" class="round-btn secondary">🔊</button>
+        <button id="playBtn" class="play-btn">▶</button>
+        <button id="reloadBtn" class="round-btn secondary">↻</button>
+      </div>
+
+      <div class="volume-row">
+        <span>🔈</span>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.9">
+        <span>🔊</span>
+      </div>
+
+      <div id="playerStatus" class="player-status">Pronta para tocar</div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div>
+          <span class="section-kicker">PROGRAMAÇÃO DIÁRIA</span>
+          <h3>Programas da casa</h3>
+        </div>
+        <span class="pill">Automático</span>
+      </div>
+
+      <div class="program-grid">
+        <article class="program-card">
+          <div class="time">09:00</div>
+          <div class="program-icon">🌅</div>
+          <h4>Bom Dia Deus</h4>
+          <p>Com Pastor Luiz Felipe</p>
+          <span>Louvor • Palavra • Oração</span>
+        </article>
+
+        <article class="program-card">
+          <div class="time">12:30</div>
+          <div class="program-icon">💛</div>
+          <h4>Encontro com Deus</h4>
+          <p>Com Missionária Ingrid Laura</p>
+          <span>Mensagem • Oração • Fé</span>
+        </article>
+
+        <article class="program-card">
+          <div class="time">18:00</div>
+          <div class="program-icon">🔥</div>
+          <h4>Tarde da Benção</h4>
+          <p>Com Pastor Bernardo Henrique</p>
+          <span>Louvor • Palavra • Motivação</span>
+        </article>
+
+        <article class="program-card">
+          <div class="time">19:00</div>
+          <div class="program-icon">🏠</div>
+          <h4>Culto no Seu Lar</h4>
+          <p>Com Pastor Heitor Cruz</p>
+          <span>Pregação • Oração • Mensagem final</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="split-grid">
+      <article class="faith-card">
+        <span class="section-kicker">PALAVRA DO DIA</span>
+        <blockquote>
+          “Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho.”
+        </blockquote>
+        <p>Salmo 119:105</p>
+      </article>
+
+      <article class="prayer-card">
+        <span class="section-kicker">MOMENTO DE ORAÇÃO</span>
+        <h3>Deixe Deus cuidar do seu coração.</h3>
+        <p>Respire, ore e entregue suas preocupações. Você não está ouvindo só uma rádio — está entrando em um momento de fé.</p>
+        <button class="gold-btn" id="prayBtn">🙏 Fazer uma oração</button>
+      </article>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <div>
+          <span class="section-kicker">NOSSA REDE</span>
+          <h3>Vem Comigo</h3>
+        </div>
+      </div>
+
+      <div class="network-grid">
+        <a class="network-card" href="#" onclick="return false;">
+          <div>🎵</div>
+          <strong>Vem Comigo PLAY</strong>
+          <span>Louvores e lançamentos</span>
+        </a>
+        <a class="network-card" href="#" onclick="return false;">
+          <div>🎙️</div>
+          <strong>Vem Comigo Records</strong>
+          <span>Artistas e podcasts</span>
+        </a>
+        <a class="network-card" href="#" onclick="return false;">
+          <div>🙏</div>
+          <strong>Vem Comigo Social</strong>
+          <span>Comunidade cristã</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Web Rádio Vem Comigo Deus</strong>
+    <span>Louvor, Palavra e Fé 24 horas</span>
+    <small>Servidor próprio • Render</small>
+  </footer>
+
+  <audio id="radio" preload="none" playsinline crossorigin="anonymous"
+    src="https://servidor-vem-comigo-deus-qi8q.onrender.com/radio.mp3"></audio>
+
+  <script src="./app.js"></script>
+</body>
+</html>
